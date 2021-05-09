@@ -2,8 +2,25 @@ sudo: required
 services:
   - docker
 
-before_install:
-  - docker build -t a0987654321/redis_reader -f Dockerfile .
+cache:
+  directories:
+    - docker-cache
+
+# before_install:
+  # - docker build --cache-from a0987654321/redis_reader -t a0987654321/redis_reader -f Dockerfile .
+
+before_script:
+  - |
+    filename=docker-cache/saved_images.tar
+    if [[ -f "$filename" ]]; then docker load < "$filename"; fi
+    mkdir -p docker-cache
+    # docker pull continuumio/miniconda3
+    # docker save -o "$filename" continuumio/miniconda3
+    docker pull a0987654321/redis_reader
+    docker save -o "$filename" a0987654321/redis_reader
+    docker build --cache-from a0987654321/redis_reader -t a0987654321/redis_reader -f Dockerfile .
 
 script:
   - docker run a0987654321/redis_reader
+
+language: generic

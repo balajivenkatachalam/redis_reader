@@ -19,6 +19,6 @@ WORKDIR '/app'
 
 # RUN conda install redis -y
 
-COPY . .
+COPY ./redis_reader.py ./
 
 CMD ["python", "redis_reader.py"]
