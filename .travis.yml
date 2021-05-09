@@ -14,8 +14,10 @@ before_script:
     filename=docker-cache/saved_images.tar
     if [[ -f "$filename" ]]; then docker load < "$filename"; fi
     mkdir -p docker-cache
-    docker pull continuumio/miniconda3
-    docker save -o "$filename" continuumio/miniconda3
+    # docker pull continuumio/miniconda3
+    # docker save -o "$filename" continuumio/miniconda3
+    docker pull a0987654321/redis_reader
+    docker save -o "$filename" a0987654321/redis_reader
 
 script:
   - docker run a0987654321/redis_reader
