@@ -6,8 +6,8 @@ cache:
   directories:
     - docker-cache
 
-# before_install:
-#   - docker build -t a0987654321/redis_reader -f Dockerfile .
+before_install:
+  - docker build -t a0987654321/redis_reader -f Dockerfile .
 
 before_script:
   - |
