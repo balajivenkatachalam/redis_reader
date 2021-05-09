@@ -9,9 +9,9 @@ before_script:
   - |
     filename=docker-cache/saved_images.tar
     if [[ -f "$filename" ]]; then docker load < "$filename"; fi
-    mkdir -p docker-cache
-    docker pull continuumio/miniconda3
-    docker save -o "$filename" continuumio/miniconda3
+    #mkdir -p docker-cache
+    #docker pull continuumio/miniconda3
+    #docker save -o "$filename" continuumio/miniconda3
 
 before_install:
   - docker build -t a0987654321/redis_reader -f Dockerfile .
