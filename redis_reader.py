@@ -10,4 +10,4 @@ if __name__=="__main__":
     # redis = RedisReader()
     # print("var = ",redis.read("var"))
     print("Hello World")
-    exit(1)
+    exit(0)
