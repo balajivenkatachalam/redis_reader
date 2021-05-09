@@ -2,15 +2,8 @@ sudo: required
 services:
   - docker
 
-cache:
-  directories:
-  - docker_images
-
 before_install:
-- docker load -i docker_images/images.tar || true
-
-before_cache:
-- docker save -o docker_images/images.tar $(docker images -a -q)
+  - docker build -t a0987654321/redis_reader -f Dockerfile .
 
 script:
   - docker run a0987654321/redis_reader
