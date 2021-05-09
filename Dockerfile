@@ -1,4 +1,5 @@
-FROM evheniy/docker-data-science
+#FROM evheniy/docker-data-science
+FROM continuumio/miniconda3
 
 WORKDIR '/app'
 
