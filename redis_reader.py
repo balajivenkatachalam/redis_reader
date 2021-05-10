@@ -9,5 +9,5 @@
 if __name__=="__main__":
     # redis = RedisReader()
     # print("var = ",redis.read("var"))
-    print("Hello World!!!")
+    print("Hello World")
     exit(0)
