@@ -8,4 +8,4 @@ before_install:
 script:
   - docker run -e MY_NAME a0987654321/redis_reader
 
-language: generic
+language: python
