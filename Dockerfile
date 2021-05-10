@@ -3,6 +3,6 @@ FROM continuumio/miniconda3
 
 WORKDIR '/app'
 
-COPY . .
+COPY ./redis_reader.py .
 
 CMD ["python", "redis_reader.py"]
