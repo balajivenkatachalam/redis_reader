@@ -11,5 +11,5 @@ if __name__=="__main__":
     # redis = RedisReader()
     # print("var = ",redis.read("var"))
     
-    print("Hello Mr. ", os.environ.get("MY_NAME"))
+    print("Hello Mr. ", os.environ.get("MY_NAME"),". Hai")
     exit(0)
