@@ -1,3 +1,4 @@
+import os
 # import redis
 # class RedisReader(object):
 #     def __init__(self):
@@ -9,5 +10,6 @@
 if __name__=="__main__":
     # redis = RedisReader()
     # print("var = ",redis.read("var"))
-    print("Hello World")
+    
+    print("Hello Mr. ", os.environ.get("MY_NAME"))
     exit(0)
