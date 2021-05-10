@@ -7,7 +7,7 @@ cache:
     - docker-cache
 
 before_install:
-  - docker build --cache-from a0987654321/redis_reader -t a0987654321/redis_reader -f Dockerfile .
+  - docker build -t a0987654321/redis_reader -f Dockerfile .
 
 script:
   - docker run a0987654321/redis_reader
